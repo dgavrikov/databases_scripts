@@ -1,0 +1,15 @@
+-- Оптимизация бд, для использования фишек поддерживаемых с SQL 2008/R2
+USE [master]
+GO
+declare @db sysname = 'model'
+declare @sql_run nvarchar(1000) = N'
+ALTER DATABASE ['+@db+N'] SET ANSI_NULLS ON WITH NO_WAIT
+ALTER DATABASE ['+@db+N'] SET ANSI_PADDING ON WITH NO_WAIT
+ALTER DATABASE ['+@db+N'] SET ANSI_WARNINGS ON WITH NO_WAIT
+ALTER DATABASE ['+@db+N'] SET ARITHABORT ON WITH NO_WAIT
+ALTER DATABASE ['+@db+N'] SET CONCAT_NULL_YIELDS_NULL ON WITH NO_WAIT
+ALTER DATABASE ['+@db+N'] SET QUOTED_IDENTIFIER ON WITH NO_WAIT
+ALTER DATABASE ['+@db+N'] SET NUMERIC_ROUNDABORT OFF WITH NO_WAIT
+'
+exec sp_executesql @sql_run
+GO

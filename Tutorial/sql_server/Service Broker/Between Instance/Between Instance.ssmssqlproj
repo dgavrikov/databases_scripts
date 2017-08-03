@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Between Instance">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="192.168.56.11:sa">
+          <Created>2015-08-15T16:59:49.8474297+03:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.56.11</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+        <ConnectionNode Name="192.168.56.12:sa">
+          <Created>2015-08-15T17:00:02.9060409+03:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.56.12</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName />
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="00 introduce.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.56.12:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.56.12</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>00 introduce.sql</FullPath>
+        </FileNode>
+        <FileNode Name="01 Create TargetInst.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.56.12:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.56.12</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>01 Create TargetInst.sql</FullPath>
+        </FileNode>
+        <FileNode Name="02 Create InitiatorInst.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.56.11:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.56.11</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>02 Create InitiatorInst.sql</FullPath>
+        </FileNode>
+        <FileNode Name="03 Continue TargetInst.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.56.12:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.56.12</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>03 Continue TargetInst.sql</FullPath>
+        </FileNode>
+        <FileNode Name="04 Start Dialog and Send Message.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.56.11:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.56.11</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>04 Start Dialog and Send Message.sql</FullPath>
+        </FileNode>
+        <FileNode Name="05 Receive request and send responce.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.56.12:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.56.12</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>05 Receive request and send responce.sql</FullPath>
+        </FileNode>
+        <FileNode Name="06 Receive responce and close dialog.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.56.11:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.56.11</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>06 Receive responce and close dialog.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

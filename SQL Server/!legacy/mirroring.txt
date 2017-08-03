@@ -1,0 +1,11 @@
+Ручная активация зеркала
+
+-- Force activate mirror
+
+ALTER DATABASE [database] SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS
+
+ALTER DATABASE [database] SET PARTNER OFF
+
+--RESTART SQL Server
+
+RESTORE DATABASE [database] WITH RECOVERY

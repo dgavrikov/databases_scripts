@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Single Database", "Single Database\Single Database.ssmssqlproj", "{E1F0C370-4ABF-4299-9C61-2B8BFD81A5CA}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Between Database", "Between Database\Between Database.ssmssqlproj", "{DCF9C718-9BA6-430C-98C7-1519223389A2}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Between Instance", "Between Instance\Between Instance.ssmssqlproj", "{8B304680-291E-40A7-994B-6862AB319467}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1F0C370-4ABF-4299-9C61-2B8BFD81A5CA}.Default|Default.ActiveCfg = Default
+		{22CCE029-379F-4CF7-9639-1918BA71F42C}.Default|Default.ActiveCfg = Default
+		{DCF9C718-9BA6-430C-98C7-1519223389A2}.Default|Default.ActiveCfg = Default
+		{8B304680-291E-40A7-994B-6862AB319467}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
