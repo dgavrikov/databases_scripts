@@ -1,13 +1,17 @@
-SELECT spid,DB_NAME(p.dbid) AS DBName,p.blocked,p.lastwaittype,p.waitresource,p.open_tran,p.status,p.cmd,t.text,pl.query_plan,p.hostname,p.program_name,p.hostprocess
-FROM sys.sysprocesses p
-LEFT JOIN sys.dm_exec_requests r ON r.session_id = p.spid
-OUTER APPLY sys.dm_exec_sql_text(p.sql_handle) t
+SELECT s.session_id, DB_NAME(s.database_id) AS DBName,s.login_name ,s.host_name,s.program_name,s.host_process_id
+,s.open_transaction_count,s.status
+,r.blocking_session_id,r.last_wait_type,r.wait_resource,r.command,t.text
+,pl.query_plan
+FROM sys.dm_exec_sessions s
+left join sys.dm_exec_requests r
+	on s.session_id = r.session_id 
+OUTER APPLY sys.dm_exec_sql_text(r.sql_handle) t
 OUTER APPLY sys.dm_exec_query_plan(r.plan_handle) pl
-WHERE p.blocked > 0 
-OR spid IN (
-	SELECT p.blocked
-	FROM sys.sysprocesses p
-	WHERE p.blocked > 0
-	)
-
-
+WHERE
+	r.blocking_session_id > 0 
+OR s.session_id IN (
+	SELECT blocking_session_id
+	FROM sys.dm_exec_requests 
+	WHERE blocking_session_id > 0
+	);
+	
